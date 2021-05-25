@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <label>X :</label><br>
+    <input type="text" id="X" ><br>
+    <label>Y :</label><br>
+    <input type="text" id="Y" ><br>
+    <label>Width :</label><br>
+    <input type="text" id="Width" ><br>
+    <label>Height :</label><br>
+    <input type="text" id="Height" ><br>
+    <label>Color :</label><br>
+    <input type="text" id="Color" ><br><br>
+    <input type="submit" value="Submit"><br><br>
+
+    <canvas id="myCanvas" width="1000" height="500" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML canvas tag.</canvas>
+
+    <script>
+        var x = document.getElementById("X").value
+        var y = document.getElementById("Y").value
+        var width = document.getElementById("Width").value
+        var height = document.getElementById("Height").value
+        var color = document.getElementById("Color").value
+
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.strokeStyle = 'green';
+        ctx.rect(x, y, width, height);
+        ctx.stroke();
+    </script>
+
+</body>
+
+</html>

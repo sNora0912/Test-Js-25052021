@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script>
+        var names = ['ten1', 'ten2', 'ten3']
+
+        function random(a, b) {
+            return Math.floor(Math.random() * (a - b) + b)
+        }
+
+
+        function chooseName() {
+            return names[random(0, names.length)];
+        }
+
+        console.log(chooseName())
+    </script>
+</body>
